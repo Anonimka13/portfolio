@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Портфолио</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">Главная</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">Обо мне</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">Мои навыки</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Секция превью -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">Мария Михалина</h1>
+        <p class="home__subtitle">WEB-Разработчик, PYTHON Программист, Дизайнер, Разработчик игра на UNITY</p>
+      </section>
+      <!-- Секция с рассказом о себе -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">Обо мне</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            Программирую на языке Python.
+            Занимаюсь разработкой игр на Unity.
+            Программирую на языке C#.
+            Работаю с Blender.
+            Создаю сайты при при помощи Tilda.
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/profile.png"
+            alt="me"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+      <!-- Секция со скиллами -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">Мои навыки</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/python.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Информация о навыках</span>
+              <input class="skill__button" type="submit" name="button_python" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png"
+                alt="telegram"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Информация о навыках</span>
+              <input class="skill__button" type="submit" name="button_tg" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="https://xgm.guru/files/562/logo.png"
+                alt="unity"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Информация о навыках</span>
+              <input class="skill__button" type="submit" name="button_unity" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/2503px-Blender_logo_no_text.svg.png"
+                alt="blender"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Информация о навыках</span>
+              <input class="skill__button" type="submit" name="button_blender" value="SHOW PROJECT">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+              <a class="project__link" href="https://github.com/Anonimka13/html.git">Открыть на GitHub</a>
+          </div>
+        {% endif %}
+
+        {% if button_tg%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="project" width="250">
+              <a class="project__link" href="https://github.com/Anonimka13/ecobot1.git">Открыть на GitHub</a>
+          </div>
+        {% endif %}
+
+        {% if button_unity%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="https://cdn.worldvectorlogo.com/logos/unity-technologies-logo.svg" alt="project" width="250">
+              <a class="project__link" href="https://hub.kodland.org/ru/project/396897">Открыть на сайте</a>
+          </div>
+        {% endif %}
+
+        {% if button_blender%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="https://67bbde840cb58b20891008823317e23f.r2.cloudflarestorage.com/kodland-main-public-production/chat_materials/6672488/%D0%9A%D0%9E%D0%9C%D0%9D%D0%90%D0%A2%D0%90.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=f69d07017900f5b91cee4dfb08eaf6ea%2F20251012%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20251012T094954Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=9c5e7214f1150a5b58a35a97e81be9c031858b9bec43ff19473dfe25de0ae3e9" alt="project" width="600">
+              <a class="project__link" href="https://drive.google.com/file/d/174AdysCs5gBtmm5v0wdzhqpwUQACrNXN/view?usp=drive_link">Открыть видео</a>
+          </div>
+        {% endif %}
+      </section>
+      <!-- Секция с формой обратной связи -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">Обратная связь</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="Введите E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Комментарий"></textarea>
+          </label>
+          <button class="form__button" type="submit">ОТПРАВИТЬ</button>
+        </form>
+      </section>
+    </main>
+    <!-- Подвал для ссылок на соц-сети -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
